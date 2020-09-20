@@ -20,6 +20,7 @@ class HomeController {
         resp.render('index', {
             cars: cars
         });
+        //resp.send(cars)
     }
 
     async delete(req, resp) {
