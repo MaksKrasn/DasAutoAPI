@@ -26,10 +26,6 @@ hbs.registerPartials(__dirname + '/views/partials')
 app.use(express.urlencoded({extended: true}))
 
 app.use('/', homeRouter)
-/*app.post('/create', function(req, resp) {
-    console.log(req)
-})*/
-
 
 mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
     console.log('Success conect to DB');
