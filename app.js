@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 const hbs = require('hbs')
 const expressHbs = require('express-handlebars')
 const homeRouter = require('./routes/home.routes')
+const apiRouter = require('./routes/api.router')
 
 app.set('view engine', 'hbs')
 
@@ -26,6 +27,7 @@ hbs.registerPartials(__dirname + '/views/partials')
 app.use(express.urlencoded({extended: true}))
 
 app.use('/', homeRouter)
+app.use('/api', apiRouter)
 
 mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
     console.log('Success conect to DB');
