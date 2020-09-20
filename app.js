@@ -1,3 +1,4 @@
+require('dotenv').config()
 const config = require('./config')
 const express = require('express')
 const app = express()
@@ -30,7 +31,7 @@ app.use('/', homeRouter)
 })*/
 
 
-mongoose.connect(config.dbUri, {useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
+mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
     console.log('Success conect to DB');
 })
 
