@@ -34,6 +34,6 @@ mongoose.connect(config.dbUri, {useNewUrlParser: true, useUnifiedTopology: true}
     console.log('Success conect to DB');
 })
 
-app.listen(config.port, config.host, () => {
+app.listen(process.env.PORT, () => {
     console.log('Start server');
 })
