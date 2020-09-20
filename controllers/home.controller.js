@@ -17,10 +17,10 @@ class HomeController {
             cars.push(new Car(element.id, element.mark, element.model, element.year, element.price))
         });
         //console.log(cars)
-        /*resp.render('index', {
+        resp.render('index', {
             cars: cars
-        });*/
-        resp.send(cars)
+        });
+        //resp.send(cars)
     }
 
     async delete(req, resp) {
