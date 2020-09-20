@@ -1,0 +1,9 @@
+<ul>
+    {{#each cars}}
+    <li>{{mark}} {{model}} {{year}} - {{price}} USD
+        <a type="button" class="btn btn-danger" href="/delete/{{this.id}}">Delete</a>
+        <a type="button" class="btn btn-warning" href="/edit/{{this.id}}">Edit</a>
+    </li>
+    {{/each}}
+</ul>
+<a type="button" class="btn btn-success" href="/create">Add new car</a>

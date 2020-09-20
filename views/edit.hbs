@@ -1,0 +1,24 @@
+<form action="/edit" method = "post">
+        <div>
+            <input type="hidden" name="id" value="{{car.id}}">
+        </div>
+        <div class="form-control">
+            <label>Mark: </label>
+            <input type="text" id="mark" name="mark" value="{{car.mark}}">
+        </div>
+        <div class="form-control"> 
+            <label>Model: </label>
+            <input type="text" id="model"  name="model" value="{{car.model}}">
+        </div>
+        <div class="form-control">
+            <label>Year: </label>
+            <input type="number" id="year"  name="year" value="{{car.year}}">
+        </div>
+        <div class="form-control">
+            <label>Price: </label>
+            <input type="number" id="price"  name="price" value="{{car.price}}">
+        </div>
+        <div>
+            <button class="btn btn-warning">Save</button>
+        </div>
+</form>
