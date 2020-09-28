@@ -23,7 +23,7 @@ app.use(express.static(__dirname + '/public'))
 //регистрации пути к частичным представлениям
 hbs.registerPartials(__dirname + '/views/partials')
 
-//app.use(express.json())
+app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.use('/', homeRouter)

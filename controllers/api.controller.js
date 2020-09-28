@@ -36,6 +36,7 @@ class ApiController {
     async createCar(req, resp) {
         if(!req.body) return resp.sendStatus(400);
         let car = new Car(req.body.id, req.body.mark, req.body.model, req.body.year, req.body.price)
+        //console.log(car)
         carsService.create(car)
         resp.send(car);
     }
